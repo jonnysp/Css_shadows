@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Template</title>
+
+<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+
+<style type="text/css">
+.pagecurl-bottom:before, .pagecurl-bottom:after {
+	-webkit-box-shadow:  0 15px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
+    content: "";
+    max-width: 300px;
+	min-width:100px;
+    position: absolute;
+	bottom: 15px;
+    top: 70%;
+    width: 46%;
+    z-index: -1;
+}
+
+.pagecurl-bottom:after {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 
+    left: auto;
+    right: 2%;
+}
+
+.pagecurl-bottom:before{
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	left: 2%;
+	right:auto;
+}	
+
+.pagecurl-bottom {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow:  0px 7px 5px -6px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 7px 5px -6px rgba(0, 0, 0, 0.3);
+	
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+
+/*#########################################################*/
+
+.pagecurl-top:before, .pagecurl-top:after {
+	-webkit-box-shadow:  0 -15px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -15px 7px rgba(0, 0, 0, 0.4);
+    content: "";
+    max-width: 300px;
+	min-width:100px;
+    position: absolute;
+	bottom: 70%;
+    top:15px ;
+    width: 46%;
+    z-index: -1;
+}
+
+.pagecurl-top:after {
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(5deg); 
+    left: auto;
+    right: 2%;
+}
+
+.pagecurl-top:before{
+    -moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	left: 2%;
+	right:auto;
+}	
+
+.pagecurl-top {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow:  0px -7px 5px -6px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px -7px 5px -6px rgba(0, 0, 0, 0.3);
+	
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+
+
+/*#########################################################*/
+
+
+.pagecurl-left:before, .pagecurl-left:after {
+    content: "";
+    max-width: 300px;
+	min-width:100px;
+    position: absolute;
+	
+    width: 46%;
+    z-index: -1;
+}
+
+.pagecurl-left:after {
+	-webkit-box-shadow:  0 15px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(5deg);
+	bottom: 15px;
+    top: 70%; 
+    left:2% ;
+    right:auto ;
+}
+
+.pagecurl-left:before{
+	-webkit-box-shadow:  0 -15px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -15px 7px rgba(0, 0, 0, 0.4);
+    -moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	bottom: 70%;
+    top:15px ;
+	left: 2%;
+	right:auto;
+}	
+
+.pagecurl-left {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: -7px 0px 5px -6px rgba(0, 0, 0, 0.3);
+    box-shadow:-7px 0px 5px -6px rgba(0, 0, 0, 0.3);
+	
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+
+
+/*#########################################################*/
+
+.pagecurl-right:before, .pagecurl-right:after {
+    content: "";
+    max-width: 300px;
+	min-width:100px;
+    position: absolute;
+    width: 46%;
+    z-index: -1;
+}
+
+.pagecurl-right:after {
+	-webkit-box-shadow:  0 15px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	bottom: 15px;
+    top: 70%; 
+    left: auto;
+    right:  2%;
+}
+
+.pagecurl-right:before{
+	-webkit-box-shadow:  0 -15px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -15px 7px rgba(0, 0, 0, 0.4);
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	bottom: 70%;
+    top:15px ;
+	left: auto;
+	right:2%;
+}	
+
+.pagecurl-right {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 7px 0px  5px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 7px  0px 5px -6px rgba(0, 0, 0, 0.3);
+	
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+/*#########################################################*/
+
+.shadow-bottom:after {
+	-webkit-box-shadow:  0 10px 7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 7px rgba(0, 0, 0, 0.4);
+    content: "";
+
+    position: absolute;
+	bottom: 0;
+    top: 0;
+    width: 96%;
+    z-index: -1;
+	
+	-webkit-border-radius:  100% / 50px;
+	-moz-border-radius:  100% /  50px;
+	border-radius:  100% /  50px;
+
+	left: 2%;
+	right:2%;
+}
+
+
+
+.shadow-bottom {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+/*#########################################################*/
+
+.shadow-top:before {
+	-webkit-box-shadow: 0 -10px  7px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -10px 7px rgba(0, 0, 0, 0.4);
+    content: "";
+
+    position: absolute;
+	bottom: 70%;
+    top: 0;
+    width: 96%;
+    z-index: -1;
+	
+	-webkit-border-radius: 100% / 50%;
+	-moz-border-radius: 100% / 50%;
+	border-radius: 100% / 50%;
+
+	left: 2%;
+	right:2%;
+}
+
+
+
+.shadow-top {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+/*#########################################################*/
+
+.shadow-left:before {
+	-webkit-box-shadow:  -10px 0 7px rgba(0, 0, 0, 0.4);
+    box-shadow:  -10px 0 7px rgba(0, 0, 0, 0.4);
+    content: "";
+
+    position: absolute;
+	bottom:  2%;
+    top:  2%;
+    height: 96%;
+    z-index: -1;
+	
+	-webkit-border-radius:  50% / 100%;
+	-moz-border-radius:   50% / 100%;
+	border-radius:  50% / 100%;
+
+	left: 0;
+	right:70%;
+}
+
+
+
+.shadow-left {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.shadow-right:after {
+	-webkit-box-shadow:  10px 0 7px rgba(0, 0, 0, 0.4);
+    box-shadow:  10px 0 7px rgba(0, 0, 0, 0.4);
+    content: "";
+	
+    position: absolute;
+	bottom:  2%;
+    top:  2%;
+    height: 96%;
+    z-index: -1;
+	
+	-webkit-border-radius:  50% / 100%;
+	-moz-border-radius:   50% / 100%;
+	border-radius:  50% / 100%;
+
+	left:70% ;
+	right:0;
+}
+
+
+
+.shadow-right {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+    height: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<div class="container">
+<br><br>
+
+
+	<div class="row">
+        <div class="span12">
+        	
+        
+            <div class="page-header"><h1>Page-Curls</h1></div>
+            <div class="row">
+              <div class="span6"><div class="pagecurl-bottom "><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+              <div class="span6"><div class="pagecurl-top"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+            </div>
+            
+             <br><br>
+
+            <div class="row">
+              <div class="span6"><div class="pagecurl-left "><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+              <div class="span6"><div class="pagecurl-right"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+<br><br>
+
+	<div class="row">
+        <div class="span12">
+            <div class="page-header"><h1>Shadows</h1></div>
+            <div class="row">
+              <div class="span6"><div class="shadow-bottom"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+              <div class="span6"><div class="shadow-top"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+             </div>
+             
+             <br><br>
+             
+            <div class="row">
+              <div class="span6"><div class="shadow-bottom shadow-top"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+              <div class="span6"><div class="shadow-right"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+            </div>
+            
+            <br><br>
+            
+            <div class="row">
+              <div class="span6"><div class="shadow-left"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+              <div class="span6"><div class="shadow-left shadow-right"><img src="img/test.png" style="width:100%;"><br><br></div><br><br></div>
+            </div>
+            
+              <br><br>
+            
+            
+        </div>
+        
+            
+
+        
+    </div>
+    
+    
+<br><br>    
+<br><br>    
+<br><br>    
+    
+    
+</div>
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
