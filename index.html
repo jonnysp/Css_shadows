@@ -104,13 +104,109 @@
 
 .pagecurl-left:before, .pagecurl-left:after {
     content: "";
+    height: 46%;
+    position: absolute;
+    left: 15px;
+    width: 15px;
+    z-index: -1;
+}
+
+.pagecurl-left:after {
+	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 
+	bottom:2%;
+}
+
+.pagecurl-left:before{
+	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	top:2% ;
+}	
+
+.pagecurl-left {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+    width: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+/*#########################################################*/
+
+.pagecurl-right:before, .pagecurl-right:after {
+    content: "";
+    height: 46%;
+    position: absolute;
+    right: 15px;
+    width: 15px;
+    z-index: -1;
+}
+
+.pagecurl-right:after {
+	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	bottom:2%;
+}
+
+.pagecurl-right:before{
+	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 	
+	top:2% ;
+}	
+
+.pagecurl-right {
+    background-color: #FFFFFF;
+	border:1px solid #DDDDDD;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+    width: auto;
+    margin: 0 auto 15px;
+    padding: 10px;
+    position: relative;
+    z-index: inherit;
+}
+
+/*#########################################################*/
+
+.pageflip-left:before, .pageflip-left:after {
+    content: "";
     position: absolute;
     width: 46%;
 	height:15px;
     z-index: -1;
 }
 
-.pagecurl-left:after {
+.pageflip-left:after {
 	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
 	-moz-transform: rotate(-5deg);
@@ -122,7 +218,7 @@
     left:2% ;
 }
 
-.pagecurl-left:before{
+.pageflip-left:before{
 	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
 	
@@ -136,7 +232,7 @@
 	left: 2%;
 }	
 
-.pagecurl-left {
+.pageflip-left {
     background-color: #FFFFFF;
 	border:1px solid #DDDDDD;
 	
@@ -153,7 +249,7 @@
 
 /*#########################################################*/
 
-.pagecurl-right:before, .pagecurl-right:after {
+.pageflip-right:before, .pageflip-right:after {
     content: "";
     position: absolute;
     width: 46%;
@@ -161,7 +257,7 @@
     z-index: -1;
 }
 
-.pagecurl-right:after {
+.pageflip-right:after {
 	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
 	-moz-transform: rotate(5deg);
@@ -173,7 +269,7 @@
     right:  2%;
 }
 
-.pagecurl-right:before{
+.pageflip-right:before{
 	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
     -moz-transform: rotate(-5deg);
@@ -185,7 +281,7 @@
 	right:2%;
 }	
 
-.pagecurl-right {
+.pageflip-right {
     background-color: #FFFFFF;
 	border:1px solid #DDDDDD;
 	
@@ -306,9 +402,9 @@
 	height:46%;
     z-index: -1;
 	
-	-webkit-border-radius:  100% / 50px;
-	-moz-border-radius:  100% /  50px;
-	border-radius:  100% /  50px;
+	-webkit-border-radius: 100% / 20px;
+	-moz-border-radius: 100% / 20px;
+	border-radius: 100% / 20px;
 
 	left: 2%;
 	right:2%;
@@ -341,9 +437,9 @@
     top: 0;
     z-index: -1;
 	
-	-webkit-border-radius: 100% / 50%;
-	-moz-border-radius: 100% / 50%;
-	border-radius: 100% / 50%;
+	-webkit-border-radius: 100% / 20%;
+	-moz-border-radius: 100% / 20%;
+	border-radius: 100% /20%;
 
 	left: 2%;
 	right:2%;
@@ -375,9 +471,9 @@
 	bottom:  2%;
     top:  2%;
     z-index: -1;
-	-webkit-border-radius:  50% / 100%;
-	-moz-border-radius:   50% / 100%;
-	border-radius:  50% / 100%;
+	-webkit-border-radius:  20% / 100%;
+	-moz-border-radius:   20% / 100%;
+	border-radius:  20% / 100%;
 	left: 0;
 	width:46%;
 }
@@ -411,9 +507,9 @@
 	right:0;
     z-index: -1;
 	
-	-webkit-border-radius:  50% / 100%;
-	-moz-border-radius:   50% / 100%;
-	border-radius:  50% / 100%;
+	-webkit-border-radius:  20% / 100%;
+	-moz-border-radius:   20% / 100%;
+	border-radius:  20% / 100%;
 	
 }
 
@@ -433,6 +529,8 @@
 }
 
 
+
+
 </style>
 
 
@@ -448,62 +546,55 @@
         	
         
             <div class="page-header"><h1>Page-Curls</h1></div>
+            
             <div class="row">
               <div class="span6"><div class="pagecurl-bottom "><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pagecurl-bottom</p></div><br></div>
               <div class="span6"><div class="pagecurl-top"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pagecurl-top</p></div><br><br></div>
             </div>
             
-             <br><br>
-
+            <br><br>
+            
             <div class="row">
-              <div class="span6"><div class="pagecurl-left "><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pagecurl-left</p></div><br><br></div>
+              <div class="span6"><div class="pagecurl-left"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pagecurl-left</p></div><br></div>
               <div class="span6"><div class="pagecurl-right"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pagecurl-right</p></div><br><br></div>
             </div>
             
-            <br><br>
+            <div class="page-header"><h1>Page-Flip</h1></div>
             
             <div class="row">
               <div class="span6"><div class="pageflip-top"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pageflip-top</p></div><br><br></div>
               <div class="span6"><div class="pageflip-bottom"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pageflip-bottom</p></div><br><br></div>
-            </div> 
-        </div>
-    </div>
+            </div>
+             
+            <br><br>
 
-    
-<br><br>
-
-	<div class="row">
-        <div class="span12">
-            <div class="page-header"><h1>Shadows</h1></div>
             <div class="row">
-              <div class="span6"><div class="shadow-top"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-top</p></div><br><br></div>
-              <div class="span6"><div class="shadow-bottom"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-bottom</p></div><br><br></div>
-             </div>
+              <div class="span6"><div class="pageflip-left "><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pageflip-left</p></div><br><br></div>
+              <div class="span6"><div class="pageflip-right"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.pageflip-right</p></div><br><br></div>
+            </div>
+            
+            
+                  <div class="page-header"><h1>Shadows</h1></div>
+            
+            <div class="row">
+              <div class="span4"><div class="shadow-top"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-top</p></div><br><br></div>
+              <div class="span4"><div class="shadow-top shadow-bottom "><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-top .shadow-bottom</p></div><br><br></div>
+              <div class="span4"><div class="shadow-bottom"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-bottom</p></div><br><br></div>
+            </div>
              
              <br><br>
              
             <div class="row">
-              <div class="span6"><div class="shadow-top shadow-bottom "><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-top .shadow-bottom</p></div><br><br></div>
-              <div class="span6"><div class="shadow-right"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-right</p></div><br><br></div>
+              <div class="span4"><div class="shadow-left"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-left</p></div><br><br></div>
+              <div class="span4"><div class="shadow-left shadow-right"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-left .shadow-right</p></div><br><br></div>
+              <div class="span4"><div class="shadow-right"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-right</p></div><br><br></div>
             </div>
             
-            <br><br>
-            
-            <div class="row">
-              <div class="span6"><div class="shadow-left"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-left</p></div><br><br></div>
-              <div class="span6"><div class="shadow-left shadow-right"><img src="img/test.png" style="width:100%;"><br><br><p style="text-align:center;">.shadow-left .shadow-right</p></div><br><br></div>
-            </div>
-            
-              <br><br>
-            
-            
-        </div>
-        
             
 
-        
+        </div>
     </div>
-    
+
     
 <br><br>    
 <br><br>    
