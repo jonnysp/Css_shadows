@@ -12,6 +12,7 @@
 
 .pagecurl-bottom:before, .pagecurl-bottom:after {
 	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
     content: "";
     position: absolute;
@@ -49,6 +50,7 @@
 
 .pagecurl-top:before, .pagecurl-top:after {
 	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
     content: "";
     position: absolute;
@@ -85,6 +87,10 @@
 /*#########################################################*/
 
 .pagecurl-left:before, .pagecurl-left:after {
+	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	
     content: "";
     height: 46%;
     position: absolute;
@@ -94,8 +100,6 @@
 }
 
 .pagecurl-left:after {
-	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
 	-moz-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
     -o-transform: rotate(5deg);
@@ -105,8 +109,6 @@
 }
 
 .pagecurl-left:before{
-	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
     -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
@@ -123,6 +125,10 @@
 /*#########################################################*/
 
 .pagecurl-right:before, .pagecurl-right:after {
+	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	
     content: "";
     height: 46%;
     position: absolute;
@@ -132,8 +138,6 @@
 }
 
 .pagecurl-right:after {
-	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
     -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
@@ -143,8 +147,6 @@
 }
 
 .pagecurl-right:before{
-	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
 	-moz-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
     -o-transform: rotate(5deg);
@@ -169,18 +171,22 @@
 
 .pageflip-left:after {
 	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+	
 	-moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     transform: rotate(-5deg);
+	
 	bottom: 15px;
     left:2% ;
 }
 
 .pageflip-left:before{
 	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
 	
     -moz-transform: rotate(5deg);
@@ -210,24 +216,30 @@
 
 .pageflip-right:after {
 	-webkit-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+	
 	-moz-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
     -o-transform: rotate(5deg);
     -ms-transform: rotate(5deg);
     transform: rotate(5deg);
+	
 	bottom: 15px;
     right:  2%;
 }
 
 .pageflip-right:before{
 	-webkit-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+	
     -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     transform: rotate(-5deg);
+	
     top:15px ;
 	right:2%;
 }	
@@ -250,23 +262,29 @@
 
 .pageflip-top:after {
 	-webkit-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
     box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
+	
 	-moz-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
     -o-transform: rotate(5deg);
     -ms-transform: rotate(5deg);
+	
     transform: rotate(5deg); 
     right:15px;
 }
 
 .pageflip-top:before{
 	-webkit-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
     box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	
     -moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     transform: rotate(-5deg);
+	
 	left: 15px;
 }	
 
@@ -288,23 +306,29 @@
 
 .pageflip-bottom:after {
 	-webkit-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
     box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	
 	-moz-transform: rotate(-5deg);
 	-webkit-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
     transform: rotate(-5deg); 
+	
     right:15px;
 }
 
 .pageflip-bottom:before{
 	-webkit-box-shadow: -15px 0 6px rgba(0, 0, 0, 0.3);
-    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -15px 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	
     -moz-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
     -o-transform: rotate(5deg);
     -ms-transform: rotate(5deg);
     transform: rotate(5deg);
+	
 	left: 15px;
 }
 	
@@ -316,10 +340,10 @@
 /*#########################################################*/
 
 .shadow-bottom:after {
-	-webkit-box-shadow:  0 6px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:  0 6px 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.3);
     content: "";
-	
 
     position: absolute;
 	bottom: 0;
@@ -342,8 +366,9 @@
 /*#########################################################*/
 
 .shadow-top:before {
-	-webkit-box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
     content: "";
 
     position: absolute;
@@ -366,8 +391,9 @@
 /*#########################################################*/
 
 .shadow-left:before {
-	-webkit-box-shadow:  -6px 0 6px rgba(0, 0, 0, 0.3);
-    box-shadow:  -6px 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:  -6px 0 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: -6px 0 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow:  -6px 0 6px -2px rgba(0, 0, 0, 0.3);
     content: "";
 
     position: absolute;
@@ -389,8 +415,10 @@
 /*#########################################################*/
 
 .shadow-right:after {
-	-webkit-box-shadow: 6px 0 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 6px 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
+	
     content: "";
 	
     position: absolute;
@@ -410,6 +438,9 @@
     position: relative;
     z-index: inherit;
 }
+
+
+
 </style>
 
 
@@ -422,7 +453,6 @@
 
 	<div class="row">
         <div class="span12">
-        	
         
             <div class="page-header shadow-bottom"><h1>Page-Curl</h1></div>
             
