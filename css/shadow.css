@@ -1,0 +1,440 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.pagecurl-bottom:before, .pagecurl-bottom:after {
+	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+    content: "";
+    position: absolute;
+	bottom: 15px;
+	height: 15px;
+	width: 46%;
+	max-width:300px;
+    z-index: -1;
+}
+
+.pagecurl-bottom:after {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 
+    right: 2%;
+}
+
+.pagecurl-bottom:before{
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	left: 2%;
+}	
+
+.pagecurl-bottom{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+
+/*#########################################################*/
+
+.pagecurl-top:before, .pagecurl-top:after {
+	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+    content: "";
+    position: absolute;
+    top:15px ;
+	height:15px;
+    width: 46%;
+	max-width:300px;
+    z-index: -1;
+	
+}
+
+.pagecurl-top:after {
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg); 
+    right: 2%;
+}
+
+.pagecurl-top:before{
+    -moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	left: 2%;
+}	
+
+.pagecurl-top{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.pagecurl-left:before, .pagecurl-left:after {
+	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	
+    content: "";
+    height: 46%;
+	max-height:300px;
+    position: absolute;
+    left: 15px;
+    width: 15px;
+    z-index: -1;
+}
+
+.pagecurl-left:after {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 
+	bottom:2%;
+}
+
+.pagecurl-left:before{
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	top:2% ;
+}	
+
+.pagecurl-left{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.pagecurl-right:before, .pagecurl-right:after {
+	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	
+    content: "";
+    height: 46%;
+	max-height:300px;
+    position: absolute;
+    right: 15px;
+    width: 15px;
+    z-index: -1;
+}
+
+.pagecurl-right:after {
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	bottom:2%;
+}
+
+.pagecurl-right:before{
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg); 	
+	top:2% ;
+}	
+.pagecurl-right{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.pageflip-left:before, .pageflip-left:after {
+    content: "";
+    position: absolute;
+    width: 46%;
+	max-width:300px;
+	height:15px;
+    z-index: -1;
+}
+
+.pageflip-left:after {
+	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+	
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	
+	bottom: 15px;
+    left:2% ;
+}
+
+.pageflip-left:before{
+	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+	
+    -moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	
+    top:15px ;
+	left: 2%;
+}
+	
+.pageflip-left{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.pageflip-right:before, .pageflip-right:after {
+    content: "";
+    position: absolute;
+    width: 46%;
+	max-width:300px;
+	height:15px;
+    z-index: -1;
+}
+
+.pageflip-right:after {
+	-webkit-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
+	
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	
+	bottom: 15px;
+    right:  2%;
+}
+
+.pageflip-right:before{
+	-webkit-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
+	
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	
+    top:15px ;
+	right:2%;
+}	
+
+.pageflip-right{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.pageflip-top:before, .pageflip-top:after {
+    content: "";
+    height: 46%;
+	max-height:300px;
+    position: absolute;
+    top:2% ;
+    width: 15px;
+    z-index: -1;
+}
+
+.pageflip-top:after {
+	-webkit-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
+	
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+	
+    transform: rotate(5deg); 
+    right:15px;
+}
+
+.pageflip-top:before{
+	-webkit-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	
+    -moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+	
+	left: 15px;
+}	
+
+.pageflip-top{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.pageflip-bottom:before, .pageflip-bottom:after {
+    content: "";
+    height: 46%;
+	max-height:300px;
+    position: absolute;
+	bottom:2%;
+    width: 15px;
+    z-index: -1;
+}
+
+.pageflip-bottom:after {
+	-webkit-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+    box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
+	
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg); 
+	
+    right:15px;
+}
+
+.pageflip-bottom:before{
+	-webkit-box-shadow: -15px 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -15px 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
+	
+    -moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+	
+	left: 15px;
+}
+	
+.pageflip-bottom{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.shadow-bottom:after {
+	-webkit-box-shadow:  0 6px 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.3);
+    content: "";
+
+    position: absolute;
+	bottom: 0;
+	height:100%;
+    z-index: -1;
+	
+	-webkit-border-radius: 100% / 20px;
+	-moz-border-radius: 100% / 20px;
+	border-radius: 100% / 20px;
+
+	left: 2%;
+	right:2%;
+}
+
+.shadow-bottom{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.shadow-top:before {
+	-webkit-box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
+    content: "";
+
+    position: absolute;
+	height:100%;
+    top: 0;
+    z-index: -1;
+	
+	-webkit-border-radius: 100% / 20px;
+	-moz-border-radius: 100% / 20px;
+	border-radius: 100% / 20px;
+
+	left: 2%;
+	right:2%;
+}
+.shadow-top{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.shadow-left:before {
+	-webkit-box-shadow:  -6px 0 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: -6px 0 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow:  -6px 0 6px -2px rgba(0, 0, 0, 0.3);
+    content: "";
+
+    position: absolute;
+	bottom:  2%;
+    top:  2%;
+    z-index: -1;
+	-webkit-border-radius: 20px / 100%;
+	-moz-border-radius:  20px / 100%;
+	border-radius: 20px / 100%;
+	left: 0;
+	width:100%;
+}
+
+.shadow-left{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+/*#########################################################*/
+
+.shadow-right:after {
+	-webkit-box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
+	
+    content: "";
+	
+    position: absolute;
+	bottom:  2%;
+    top:  2%;
+	width:100%;
+	right:0;
+    z-index: -1;
+	
+	-webkit-border-radius: 20px / 100%;
+	-moz-border-radius: 20px / 100%;
+	border-radius: 20px / 100%;
+}
+
+.shadow-right{
+	background-color: #FFFFFF;
+    position: relative;
+    z-index: inherit;
+}
+
