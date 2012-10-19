@@ -1,440 +1,349 @@
-@charset "UTF-8";
-/* CSS Document */
-
-.pagecurl-bottom:before, .pagecurl-bottom:after {
-	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
-    content: "";
-    position: absolute;
-	bottom: 15px;
-	height: 15px;
-	width: 46%;
-	max-width:300px;
-    z-index: -1;
+.shadow {
+  background-color: #ffffff;
+  position: relative;
+  z-index: inherit;
 }
-
-.pagecurl-bottom:after {
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg); 
-    right: 2%;
+.shadow.shadow-curl-right:before,
+.shadow.shadow-curl-left:before,
+.shadow.shadow-curl-bottom:before,
+.shadow.shadow-curl-top:before,
+.shadow.shadow-flip-left:before,
+.shadow.shadow-flip-right:before,
+.shadow.shadow-flip-top:before,
+.shadow.shadow-flip-bottom:before,
+.shadow.shadow-curl-right:after,
+.shadow.shadow-curl-left:after,
+.shadow.shadow-curl-bottom:after,
+.shadow.shadow-curl-top:after,
+.shadow.shadow-flip-left:after,
+.shadow.shadow-flip-right:after,
+.shadow.shadow-flip-top:after,
+.shadow.shadow-flip-bottom:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
 }
-
-.pagecurl-bottom:before{
-    -moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-	left: 2%;
-}	
-
-.pagecurl-bottom{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-curl-right:before,
+.shadow.shadow-curl-left:before,
+.shadow.shadow-curl-right:after,
+.shadow.shadow-curl-left:after {
+  height: 46%;
+  max-height: 300px;
+  width: 10px;
 }
-
-/*#########################################################*/
-
-.pagecurl-top:before, .pagecurl-top:after {
-	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
-    content: "";
-    position: absolute;
-    top:15px ;
-	height:15px;
-    width: 46%;
-	max-width:300px;
-    z-index: -1;
-	
+.shadow.shadow-curl-right:before,
+.shadow.shadow-curl-left:before {
+  top: 2%;
 }
-
-.pagecurl-top:after {
-	-moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg); 
-    right: 2%;
+.shadow.shadow-curl-right:after,
+.shadow.shadow-curl-left:after {
+  bottom: 2%;
 }
-
-.pagecurl-top:before{
-    -moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg);
-	left: 2%;
-}	
-
-.pagecurl-top{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-curl-right:before,
+.shadow.shadow-curl-right:after {
+  -webkit-box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  right: 10px;
 }
-/*#########################################################*/
-
-.pagecurl-left:before, .pagecurl-left:after {
-	-webkit-box-shadow:  -15px 0  6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
-	
-    content: "";
-    height: 46%;
-	max-height:300px;
-    position: absolute;
-    left: 15px;
-    width: 15px;
-    z-index: -1;
+.shadow.shadow-curl-right:before {
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
-
-.pagecurl-left:after {
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg); 
-	bottom:2%;
+.shadow.shadow-curl-right:after {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-
-.pagecurl-left:before{
-    -moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-	top:2% ;
-}	
-
-.pagecurl-left{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-curl-left:before,
+.shadow.shadow-curl-left:after {
+  -webkit-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  left: 10px;
 }
-/*#########################################################*/
-
-.pagecurl-right:before, .pagecurl-right:after {
-	-webkit-box-shadow:  15px 0  6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-	
-    content: "";
-    height: 46%;
-	max-height:300px;
-    position: absolute;
-    right: 15px;
-    width: 15px;
-    z-index: -1;
+.shadow.shadow-curl-left:before {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-
-.pagecurl-right:after {
-    -moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-	bottom:2%;
+.shadow.shadow-curl-left:after {
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
-
-.pagecurl-right:before{
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg); 	
-	top:2% ;
-}	
-.pagecurl-right{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-curl-bottom:before,
+.shadow.shadow-curl-top:before,
+.shadow.shadow-curl-bottom:after,
+.shadow.shadow-curl-top:after {
+  height: 10px;
+  width: 46%;
+  max-width: 300px;
 }
-/*#########################################################*/
-
-.pageflip-left:before, .pageflip-left:after {
-    content: "";
-    position: absolute;
-    width: 46%;
-	max-width:300px;
-	height:15px;
-    z-index: -1;
+.shadow.shadow-curl-bottom:before,
+.shadow.shadow-curl-top:before {
+  left: 2%;
 }
-
-.pageflip-left:after {
-	-webkit-box-shadow:  0 15px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
-	
-	-moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-	
-	bottom: 15px;
-    left:2% ;
+.shadow.shadow-curl-bottom:after,
+.shadow.shadow-curl-top:after {
+  right: 2%;
 }
-
-.pageflip-left:before{
-	-webkit-box-shadow:  0 -15px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
-	
-    -moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg);
-	
-    top:15px ;
-	left: 2%;
+.shadow.shadow-curl-bottom:before,
+.shadow.shadow-curl-bottom:after {
+  -webkit-box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  bottom: 10px;
 }
-	
-.pageflip-left{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-curl-bottom:before {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-/*#########################################################*/
-
-.pageflip-right:before, .pageflip-right:after {
-    content: "";
-    position: absolute;
-    width: 46%;
-	max-width:300px;
-	height:15px;
-    z-index: -1;
+.shadow.shadow-curl-bottom:after {
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
-
-.pageflip-right:after {
-	-webkit-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 15px 6px rgba(0, 0, 0, 0.3);
-	
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg);
-	
-	bottom: 15px;
-    right:  2%;
+.shadow.shadow-curl-top:before,
+.shadow.shadow-curl-top:after {
+  -webkit-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  top: 10px;
 }
-
-.pageflip-right:before{
-	-webkit-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 -15px 6px rgba(0, 0, 0, 0.3);
-	
-    -moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-	
-    top:15px ;
-	right:2%;
-}	
-
-.pageflip-right{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-curl-top:before {
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
-/*#########################################################*/
-
-.pageflip-top:before, .pageflip-top:after {
-    content: "";
-    height: 46%;
-	max-height:300px;
-    position: absolute;
-    top:2% ;
-    width: 15px;
-    z-index: -1;
+.shadow.shadow-curl-top:after {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-
-.pageflip-top:after {
-	-webkit-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:15px 0  6px rgba(0, 0, 0, 0.3);
-	
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-	
-    transform: rotate(5deg); 
-    right:15px;
+.shadow.shadow-flip-left:before,
+.shadow.shadow-flip-right:before,
+.shadow.shadow-flip-left:after,
+.shadow.shadow-flip-right:after {
+  width: 46%;
+  max-width: 300px;
+  height: 10px;
 }
-
-.pageflip-top:before{
-	-webkit-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: -15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
-	
-    -moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-	
-	left: 15px;
-}	
-
-.pageflip-top{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-flip-left:before,
+.shadow.shadow-flip-right:before {
+  top: 10px;
 }
-/*#########################################################*/
-
-.pageflip-bottom:before, .pageflip-bottom:after {
-    content: "";
-    height: 46%;
-	max-height:300px;
-    position: absolute;
-	bottom:2%;
-    width: 15px;
-    z-index: -1;
+.shadow.shadow-flip-left:after,
+.shadow.shadow-flip-right:after {
+  bottom: 10px;
 }
-
-.pageflip-bottom:after {
-	-webkit-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-    box-shadow: 15px 0  6px rgba(0, 0, 0, 0.3);
-	
-	-moz-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg); 
-	
-    right:15px;
+.shadow.shadow-flip-left:before,
+.shadow.shadow-flip-left:after {
+  left: 2%;
 }
-
-.pageflip-bottom:before{
-	-webkit-box-shadow: -15px 0 6px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -15px 0 6px rgba(0, 0, 0, 0.3);
-	box-shadow:-15px 0  6px rgba(0, 0, 0, 0.3);
-	
-    -moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    transform: rotate(5deg);
-	
-	left: 15px;
+.shadow.shadow-flip-left:before {
+  -webkit-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
-	
-.pageflip-bottom{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-flip-left:after {
+  -webkit-box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-/*#########################################################*/
-
-.shadow-bottom:after {
-	-webkit-box-shadow:  0 6px 6px -2px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 6px 6px -2px rgba(0, 0, 0, 0.3);
-    content: "";
-
-    position: absolute;
-	bottom: 0;
-	height:100%;
-    z-index: -1;
-	
-	-webkit-border-radius: 100% / 20px;
-	-moz-border-radius: 100% / 20px;
-	border-radius: 100% / 20px;
-
-	left: 2%;
-	right:2%;
+.shadow.shadow-flip-right:before,
+.shadow.shadow-flip-right:after {
+  right: 2%;
 }
-
-.shadow-bottom{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-flip-right:before {
+  -webkit-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-/*#########################################################*/
-
-.shadow-top:before {
-	-webkit-box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 -6px 6px -2px rgba(0, 0, 0, 0.3);
-    content: "";
-
-    position: absolute;
-	height:100%;
-    top: 0;
-    z-index: -1;
-	
-	-webkit-border-radius: 100% / 20px;
-	-moz-border-radius: 100% / 20px;
-	border-radius: 100% / 20px;
-
-	left: 2%;
-	right:2%;
+.shadow.shadow-flip-right:after {
+  -webkit-box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
-.shadow-top{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-flip-top:before,
+.shadow.shadow-flip-bottom:before,
+.shadow.shadow-flip-top:after,
+.shadow.shadow-flip-bottom:after {
+  height: 46%;
+  max-height: 300px;
+  width: 10px;
 }
-/*#########################################################*/
-
-.shadow-left:before {
-	-webkit-box-shadow:  -6px 0 6px -2px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: -6px 0 6px -2px rgba(0, 0, 0, 0.3);
-    box-shadow:  -6px 0 6px -2px rgba(0, 0, 0, 0.3);
-    content: "";
-
-    position: absolute;
-	bottom:  2%;
-    top:  2%;
-    z-index: -1;
-	-webkit-border-radius: 20px / 100%;
-	-moz-border-radius:  20px / 100%;
-	border-radius: 20px / 100%;
-	left: 0;
-	width:100%;
+.shadow.shadow-flip-top:before,
+.shadow.shadow-flip-bottom:before {
+  left: 10px;
 }
-
-.shadow-left{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-flip-top:after,
+.shadow.shadow-flip-bottom:after {
+  right: 10px;
 }
-/*#########################################################*/
-
-.shadow-right:after {
-	-webkit-box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
-    box-shadow: 6px 0 6px -2px rgba(0, 0, 0, 0.3);
-	
-    content: "";
-	
-    position: absolute;
-	bottom:  2%;
-    top:  2%;
-	width:100%;
-	right:0;
-    z-index: -1;
-	
-	-webkit-border-radius: 20px / 100%;
-	-moz-border-radius: 20px / 100%;
-	border-radius: 20px / 100%;
+.shadow.shadow-flip-top:before,
+.shadow.shadow-flip-top:after {
+  top: 2%;
 }
-
-.shadow-right{
-	background-color: #FFFFFF;
-    position: relative;
-    z-index: inherit;
+.shadow.shadow-flip-top:before {
+  -webkit-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
 }
-
+.shadow.shadow-flip-top:after {
+  -webkit-box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.shadow.shadow-flip-bottom:before,
+.shadow.shadow-flip-bottom:after {
+  bottom: 2%;
+}
+.shadow.shadow-flip-bottom:before {
+  -webkit-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.shadow.shadow-flip-bottom:after {
+  -webkit-box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.shadow.shadow-bottom:after,
+.shadow.shadow-right:after,
+.shadow.shadow-left:before,
+.shadow.shadow-top:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.shadow.shadow-bottom:after {
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 100% 20px;
+  -moz-border-radius-topleft: 100% 20px;
+  -moz-border-radius-topright: 100% 20px;
+  -moz-border-radius-bottomright: 100% 20px;
+  -moz-border-radius-bottomleft: 100% 20px;
+  border-top-left-radius: 100% 20px;
+  border-top-right-radius: 100% 20px;
+  border-bottom-right-radius: 100% 20px;
+  border-bottom-left-radius: 100% 20px;
+  left: 2%;
+  right: 2%;
+  bottom: 0;
+  height: 100%;
+}
+.shadow.shadow-right:after {
+  -webkit-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px 100%;
+  -moz-border-radius-topleft: 20px 100%;
+  -moz-border-radius-topright: 20px 100%;
+  -moz-border-radius-bottomright: 20px 100%;
+  -moz-border-radius-bottomleft: 20px 100%;
+  border-top-left-radius: 20px 100%;
+  border-top-right-radius: 20px 100%;
+  border-bottom-right-radius: 20px 100%;
+  border-bottom-left-radius: 20px 100%;
+  bottom: 2%;
+  top: 2%;
+  right: 0;
+  width: 100%;
+}
+.shadow.shadow-left:before {
+  -webkit-box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px 100%;
+  -moz-border-radius-topleft: 20px 100%;
+  -moz-border-radius-topright: 20px 100%;
+  -moz-border-radius-bottomright: 20px 100%;
+  -moz-border-radius-bottomleft: 20px 100%;
+  border-top-left-radius: 20px 100%;
+  border-top-right-radius: 20px 100%;
+  border-bottom-right-radius: 20px 100%;
+  border-bottom-left-radius: 20px 100%;
+  bottom: 2%;
+  top: 2%;
+  left: 0;
+  width: 100%;
+}
+.shadow.shadow-top:before {
+  -webkit-box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 100% 20px;
+  -moz-border-radius-topleft: 100% 20px;
+  -moz-border-radius-topright: 100% 20px;
+  -moz-border-radius-bottomright: 100% 20px;
+  -moz-border-radius-bottomleft: 100% 20px;
+  border-top-left-radius: 100% 20px;
+  border-top-right-radius: 100% 20px;
+  border-bottom-right-radius: 100% 20px;
+  border-bottom-left-radius: 100% 20px;
+  left: 2%;
+  right: 2%;
+  top: 0;
+  height: 100%;
+}
