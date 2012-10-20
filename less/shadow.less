@@ -8,16 +8,25 @@
 
 //mixins---------------------------------------------
 
-.borderradius(@first:0px,@second:0px){
-	-webkit-border-radius:@arguments;
-	-moz-border-radius-topleft:      @arguments;
-	-moz-border-radius-topright:     @arguments;
-	-moz-border-radius-bottomright:  @arguments;
-	-moz-border-radius-bottomleft:   @arguments;
-     border-top-left-radius:     @arguments;
-     border-top-right-radius:    @arguments;
-     border-bottom-right-radius: @arguments;
-     border-bottom-left-radius:  @arguments;
+.borderradius(@first,@second) when (ispixel(@first)) and (ispixel(@second)){
+	-webkit-border-radius:~"@{first}px / @{second}px";
+	-moz-border-radius:~"@{first}px / @{second}px";
+	 border-radius:~"@{first}px / @{second}px";
+}
+.borderradius(@first,@second) when (ispercentage(@first)) and (ispixel(@second)){
+	-webkit-border-radius:~"@{first}% / @{second}px";
+	-moz-border-radius:~"@{first}% / @{second}px";
+	 border-radius:~"@{first}% / @{second}px";
+}
+.borderradius(@first,@second) when (ispixel(@first)) and (ispercentage(@second)){
+	-webkit-border-radius:~"@{first}px / @{second}%";
+	-moz-border-radius:~"@{first}px / @{second}%";
+	 border-radius:~"@{first}px / @{second}%";
+}
+.borderradius(@first,@second) when (ispercentage(@first)) and (ispercentage(@second)){
+	-webkit-border-radius:~"@{first}% / @{second}%";
+	-moz-border-radius:~"@{first}% / @{second}%";
+	 border-radius:~"@{first}% / @{second}%";
 }
 
 .shadow(@x:0px,@y:0px,@blur:0px,@spread:0px,@color:rgba(0, 0, 0, 0.3)){
