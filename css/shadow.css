@@ -33,11 +33,11 @@
 }
 .shadow.shadow-curl-right:before,
 .shadow.shadow-curl-left:before {
-  top: 2%;
+  top: 4%;
 }
 .shadow.shadow-curl-right:after,
 .shadow.shadow-curl-left:after {
-  bottom: 2%;
+  bottom: 4%;
 }
 .shadow.shadow-curl-right:before,
 .shadow.shadow-curl-right:after {
@@ -91,11 +91,11 @@
 }
 .shadow.shadow-curl-bottom:before,
 .shadow.shadow-curl-top:before {
-  left: 2%;
+  left: 4%;
 }
 .shadow.shadow-curl-bottom:after,
 .shadow.shadow-curl-top:after {
-  right: 2%;
+  right: 4%;
 }
 .shadow.shadow-curl-bottom:before,
 .shadow.shadow-curl-bottom:after {
@@ -157,7 +157,7 @@
 }
 .shadow.shadow-flip-left:before,
 .shadow.shadow-flip-left:after {
-  left: 2%;
+  left: 4%;
 }
 .shadow.shadow-flip-left:before {
   -webkit-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
@@ -181,7 +181,7 @@
 }
 .shadow.shadow-flip-right:before,
 .shadow.shadow-flip-right:after {
-  right: 2%;
+  right: 4%;
 }
 .shadow.shadow-flip-right:before {
   -webkit-box-shadow: 0 -10px 5px 0 rgba(0, 0, 0, 0.3);
@@ -221,7 +221,7 @@
 }
 .shadow.shadow-flip-top:before,
 .shadow.shadow-flip-top:after {
-  top: 2%;
+  top: 4%;
 }
 .shadow.shadow-flip-top:before {
   -webkit-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -245,7 +245,7 @@
 }
 .shadow.shadow-flip-bottom:before,
 .shadow.shadow-flip-bottom:after {
-  bottom: 2%;
+  bottom: 4%;
 }
 .shadow.shadow-flip-bottom:before {
   -webkit-box-shadow: -10px 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -282,8 +282,8 @@
   -webkit-border-radius: 100% / 20px;
   -moz-border-radius: 100% / 20px;
   border-radius: 100% / 20px;
-  left: 2%;
-  right: 2%;
+  left: 4%;
+  right: 4%;
   bottom: 0;
   height: 100%;
 }
@@ -294,8 +294,8 @@
   -webkit-border-radius: 20px / 100%;
   -moz-border-radius: 20px / 100%;
   border-radius: 20px / 100%;
-  bottom: 2%;
-  top: 2%;
+  bottom: 4%;
+  top: 4%;
   right: 0;
   width: 100%;
 }
@@ -306,8 +306,8 @@
   -webkit-border-radius: 20px / 100%;
   -moz-border-radius: 20px / 100%;
   border-radius: 20px / 100%;
-  bottom: 2%;
-  top: 2%;
+  bottom: 4%;
+  top: 4%;
   left: 0;
   width: 100%;
 }
@@ -318,8 +318,8 @@
   -webkit-border-radius: 100% / 20px;
   -moz-border-radius: 100% / 20px;
   border-radius: 100% / 20px;
-  left: 2%;
-  right: 2%;
+  left: 4%;
+  right: 4%;
   top: 0;
   height: 100%;
 }
