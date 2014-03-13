@@ -28,7 +28,7 @@
 .shadow.shadow-curl-right:after,
 .shadow.shadow-curl-left:after {
   height: 46%;
-  max-height: 300px;
+  max-height: 250px;
   width: 10px;
 }
 .shadow.shadow-curl-right:before,
@@ -87,7 +87,7 @@
 .shadow.shadow-curl-top:after {
   height: 10px;
   width: 46%;
-  max-width: 300px;
+  max-width: 250px;
 }
 .shadow.shadow-curl-bottom:before,
 .shadow.shadow-curl-top:before {
@@ -144,7 +144,7 @@
 .shadow.shadow-flip-left:after,
 .shadow.shadow-flip-right:after {
   width: 46%;
-  max-width: 300px;
+  max-width: 250px;
   height: 10px;
 }
 .shadow.shadow-flip-left:before,
@@ -208,7 +208,7 @@
 .shadow.shadow-flip-top:after,
 .shadow.shadow-flip-bottom:after {
   height: 46%;
-  max-height: 300px;
+  max-height: 250px;
   width: 10px;
 }
 .shadow.shadow-flip-top:before,
