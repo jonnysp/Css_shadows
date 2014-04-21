@@ -14,7 +14,6 @@
 	 border-radius:~"@{first} / @{second}";
 }
 
-
 .shadow(@x:0,@y:0,@blur:0px,@spread:0px, @color:@shadowcolor) {
 	 -webkit-box-shadow: @arguments;
 		-moz-box-shadow: @arguments;
@@ -29,8 +28,6 @@
     transform:  rotate(@arguments); 
 }
 
-
-
 //mixins end------------------------------------------
 
 .shadow{
@@ -41,6 +38,10 @@
 	
 	//---------------------------------------------
 
+	&.shadow-corner-topright,
+	&.shadow-corner-topleft,
+	&.shadow-corner-bottomright,
+	&.shadow-corner-bottomleft,
 	&.shadow-curl-right,
 	&.shadow-curl-left,
 	&.shadow-curl-bottom,
@@ -55,7 +56,123 @@
 			z-index: -1;
 		}
 	}
+
+
+   //---------------------------------------------
+ 
+    &.shadow-corner-topright,
+    &.shadow-corner-topleft,
+    &.shadow-corner-bottomright,
+	&.shadow-corner-bottomleft{
+		&:before{
+			width: 46%;
+			height:@shadowwidth;
+			max-width:@shadowmax;	
+		}  
+		&:after{
+			width: @shadowwidth;
+			height: 46%;
+			max-height:@shadowmax;
+		}		
+	}
 	
+ 	//---------------------------------------------
+ 
+   &.shadow-corner-topright,
+   &.shadow-corner-topleft{
+		&:before{
+			top:@shadowwidth;
+			.shadow( 0,-@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);	
+		}  
+		&:after{
+			top:@shadowpadding;
+		}	   
+   }
+   
+ 	//---------------------------------------------
+	  
+    &.shadow-corner-bottomright,
+	&.shadow-corner-bottomleft{
+		&:before{
+			bottom: @shadowwidth;
+			.shadow( 0,@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
+		}
+		&:after{
+			bottom:@shadowpadding;
+		}
+	}
+
+	//---------------------------------------------
+
+    &.shadow-corner-topright,
+	&.shadow-corner-bottomright{
+		&:before{
+			right:@shadowpadding;
+		}
+		&:after{
+			right:@shadowwidth;
+			.shadow(@shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
+		}
+		
+	}
+
+	//---------------------------------------------
+	
+   &.shadow-corner-topright{
+	    &:before{
+			.rotate(-@shadowrotation);
+		}
+		&:after{
+			.rotate(@shadowrotation);
+		}
+   }
+
+	//---------------------------------------------
+
+	&.shadow-corner-bottomright{
+		&:before{
+			.rotate(@shadowrotation);
+		}
+		&:after{
+			.rotate(-@shadowrotation);
+		}	
+	}
+  
+ 	//---------------------------------------------
+	
+	 &.shadow-corner-topleft,
+	 &.shadow-corner-bottomleft{
+		&:before{
+			left: @shadowpadding;	
+		}
+		&:after{
+			left: @shadowwidth;
+			.shadow(-@shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
+			
+		}	 
+	  }
+  
+
+   //---------------------------------------------
+   &.shadow-corner-topleft{
+	  &:before{
+			.rotate(@shadowrotation);		
+		}
+	   &:after{
+			.rotate(-@shadowrotation);			
+	  }	 
+    }
+
+	&.shadow-corner-bottomleft{
+		&:before{
+			.rotate(-@shadowrotation);
+		}
+		&:after{
+			.rotate(@shadowrotation);
+		}
+	}
+
+
 	//---------------------------------------------
 	
 	&.shadow-curl-right,
@@ -161,9 +278,11 @@
 		}
 		&:before{
 			top:@shadowwidth ;
+			.shadow( 0,-@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
 		}
 		&:after{
 			bottom: @shadowwidth;
+			.shadow( 0,@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
 		}
 	}
 	
@@ -174,11 +293,10 @@
 			left: @shadowpadding;
 		}
 		&:before{
-			.shadow( 0,-@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(@shadowrotation);
 		}
 		&:after{
-			.shadow( 0,@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
+			
 			.rotate(-@shadowrotation);
 		}
 	}
@@ -190,11 +308,9 @@
 			right:@shadowpadding;
 		}
 		&:before{
-			.shadow( 0,-@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(-@shadowrotation);
 		}
 		&:after{
-			.shadow( 0,@shadowwidth , round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(@shadowrotation);
 		}
 	}
@@ -210,9 +326,11 @@
 		}
 		&:before{
 			left: @shadowwidth;
+			.shadow( -@shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
 		}
 		&:after{
 			right:@shadowwidth;
+			.shadow( @shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
 		}
 	}
 
@@ -223,11 +341,9 @@
 			top:@shadowpadding ;
 		}
 		&:before{
-			.shadow( -@shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(-@shadowrotation);
 		}
 		&:after{
-			.shadow( @shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(@shadowrotation);
 		}
 	}
@@ -239,11 +355,9 @@
 			bottom:@shadowpadding;
 		}
 		&:before{
-			.shadow( -@shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(@shadowrotation);
 		}
 		&:after{
-			.shadow( @shadowwidth ,0, round(@shadowwidth / 2) , 0 ,@shadowcolor);
 			.rotate(-@shadowrotation);
 		}
 	}
@@ -310,4 +424,5 @@
 			height:100%;
 		}
 	}
+	
 }
