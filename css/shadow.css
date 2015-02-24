@@ -1,7 +1,9 @@
 .shadow {
-  background-color: #ffffff;
   position: relative;
   z-index: inherit;
+}
+.shadow.shadow-background {
+  background-color: #ffffff;
 }
 .shadow.shadow-corner-topright:before,
 .shadow.shadow-corner-topleft:before,
@@ -129,7 +131,7 @@
 .shadow.shadow-corner-bottomleft:after {
   width: 10px;
   height: 46%;
-  max-height: 250px;
+  max-height: 150px;
 }
 .shadow.shadow-corner-topright:before,
 .shadow.shadow-corner-topleft:before {
@@ -164,7 +166,7 @@
 .shadow.shadow-curl-right:after,
 .shadow.shadow-curl-left:after {
   height: 46%;
-  max-height: 250px;
+  max-height: 150px;
   width: 10px;
 }
 .shadow.shadow-curl-bottom:before,
@@ -230,7 +232,7 @@
 .shadow.shadow-flip-top:after,
 .shadow.shadow-flip-bottom:after {
   height: 46%;
-  max-height: 250px;
+  max-height: 150px;
   width: 10px;
 }
 .shadow.shadow-flip-top:before,

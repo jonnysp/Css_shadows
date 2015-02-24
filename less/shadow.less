@@ -3,7 +3,7 @@
 @shadowpadding :4%;
 @shadowrotation :4deg;
 @shadowwidth :10px;
-@shadowmax :250px;
+@shadowmax :150px;
 
 //mixins---------------------------------------------
 
@@ -29,10 +29,14 @@
 
 //mixins end------------------------------------------
 
+
 .shadow{
 
-	background-color:@background;
-    position:relative;
+	&.shadow-background{
+		background-color:@background;
+	}
+
+	position:relative;
     z-index:inherit;
 	
 	//---------------------------------------------
