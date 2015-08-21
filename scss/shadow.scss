@@ -1,0 +1,356 @@
+$background :#fff;
+$shadowcolor :rgba(0, 0, 0, 0.3);
+$shadowpadding :4%;
+$shadowrotation :4deg;
+$shadowwidth :10px;
+$shadowmax :150px;
+
+//mixins---------------------------------------------
+
+@mixin borderradius($first,$second){
+	-webkit-border-radius: #{$first} / #{$second};
+	-moz-border-radius: #{$first} / #{$second};
+	border-radius: #{$first} / #{$second};
+}
+
+@mixin shadow($shadows...) {
+	 -webkit-box-shadow:$shadows;
+		-moz-box-shadow:$shadows;
+	         box-shadow:$shadows;
+}
+
+@mixin rotate($deg:0deg){
+	-webkit-transform:rotate($deg); 
+	-moz-transform:rotate($deg); 
+    -o-transform:rotate($deg); 
+    -ms-transform:rotate($deg); 
+    transform:rotate($deg); 
+}
+
+//mixins end------------------------------------------
+
+.shadow{
+
+	&.shadow-background{
+		background-color:$background;
+	}
+
+	position:relative;
+    z-index:inherit;
+	
+	//---------------------------------------------
+
+	&.shadow-corner-topright,
+	&.shadow-corner-topleft,
+	&.shadow-corner-bottomright,
+	&.shadow-corner-bottomleft,
+	&.shadow-curl-right,
+	&.shadow-curl-left,
+	&.shadow-curl-bottom,
+	&.shadow-curl-top,
+	&.shadow-flip-left,
+	&.shadow-flip-right,
+	&.shadow-flip-top,
+	&.shadow-flip-bottom{
+		&:before,&:after{
+			content:"";
+			position:absolute;
+			z-index:-1;
+		}
+	}
+	
+	&.shadow-bottom:after,
+	&.shadow-right:after,
+	&.shadow-left:before,
+	&.shadow-top:before{
+			content:"";
+			position:absolute;
+			z-index:-1;
+	}
+
+   //---------------------------------------------
+ 
+   &.shadow-left:before,
+   &.shadow-right:after,
+   &.shadow-flip-top:before,
+   &.shadow-flip-top:after,
+   &.shadow-curl-right:before,
+   &.shadow-curl-left:before,
+   &.shadow-corner-topright:after,
+   &.shadow-corner-topleft:after{
+	   top:$shadowpadding;
+   }
+
+   //---------------------------------------------
+ 
+   &.shadow-left:before,
+   &.shadow-right:after,
+   &.shadow-flip-bottom:before,
+   &.shadow-flip-bottom:after,
+   &.shadow-curl-right:after,
+   &.shadow-curl-left:after,
+   &.shadow-corner-bottomright:after,
+   &.shadow-corner-bottomleft:after{
+	   bottom:$shadowpadding;
+  }
+  
+  //---------------------------------------------
+  &.shadow-top:before,
+  &.shadow-bottom:after,
+  &.shadow-flip-right:before, 
+  &.shadow-flip-right:after,
+  &.shadow-curl-bottom:after,
+  &.shadow-curl-top:after,
+  &.shadow-corner-topright:before,
+  &.shadow-corner-bottomright:before{
+	  right:$shadowpadding;
+  }
+
+   //---------------------------------------------
+   &.shadow-top:before,
+   &.shadow-bottom:after,
+   &.shadow-flip-left:before,
+   &.shadow-flip-left:after,
+   &.shadow-curl-bottom:before,
+   &.shadow-curl-top:before,
+   &.shadow-corner-topleft:before,
+   &.shadow-corner-bottomleft:before{
+		left:$shadowpadding;	
+	}
+	
+  //------------------------------------
+  
+	&.shadow-corner-topright:after,
+	&.shadow-corner-bottomright:before,
+	&.shadow-corner-topleft:before,
+	&.shadow-corner-bottomleft:after,
+	&.shadow-curl-right:before,
+	&.shadow-curl-left:after,
+	&.shadow-curl-bottom:after,
+	&.shadow-curl-top:before,
+	&.shadow-flip-right:after,
+	&.shadow-flip-top:after,
+	&.shadow-flip-bottom:before,
+	&.shadow-flip-left:before{
+		@include rotate($shadowrotation);
+	}
+	
+	&.shadow-corner-topright:before,
+	&.shadow-corner-bottomright:after,
+	&.shadow-corner-topleft:after,
+	&.shadow-corner-bottomleft:before,
+	&.shadow-curl-right:after,
+	&.shadow-curl-left:before,
+	&.shadow-curl-bottom:before,
+	&.shadow-curl-top:after,
+	&.shadow-flip-top:before,
+	&.shadow-flip-right:before,
+	&.shadow-flip-bottom:after,
+	&.shadow-flip-left:after{
+		@include rotate($shadowrotation * -1);
+	}
+
+  //------------------------------------
+ 
+    &.shadow-corner-topright,
+    &.shadow-corner-topleft,
+    &.shadow-corner-bottomright,
+	&.shadow-corner-bottomleft{
+		&:before{
+			width:46%;
+			height:$shadowwidth;
+			max-width:$shadowmax;	
+		}  
+		&:after{
+			width:$shadowwidth;
+			height:46%;
+			max-height:$shadowmax;
+		}		
+	}
+	
+   //---------------------------------------------
+	
+   &.shadow-corner-topright,
+   &.shadow-corner-topleft{
+		&:before{
+			top:$shadowwidth;
+			@include shadow(0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor);	
+		}  
+   }
+   
+ 	//---------------------------------------------
+	  
+    &.shadow-corner-bottomright,
+	&.shadow-corner-bottomleft{
+		&:before{
+			bottom:$shadowwidth;
+			@include shadow(0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor);
+		}
+	}
+
+	//---------------------------------------------
+
+    &.shadow-corner-topright,
+	&.shadow-corner-bottomright{
+		&:after{
+			right:$shadowwidth;
+			@include shadow($shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor);
+		}
+	}
+
+ 	//---------------------------------------------
+	
+	 &.shadow-corner-topleft,
+	 &.shadow-corner-bottomleft{
+		&:after{
+			left:$shadowwidth;
+			@include shadow(($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+		}	 
+	  }
+  
+	//---------------------------------------------
+	
+	&.shadow-curl-right,
+	&.shadow-curl-left{
+		&:before,&:after{
+			height:46%;
+			max-height:$shadowmax;
+			width:$shadowwidth;
+		}
+	}
+	
+	//---------------------------------------------
+	
+	&.shadow-curl-bottom,
+	&.shadow-curl-top {
+		&:before,&:after{
+			height:$shadowwidth;
+			max-width:$shadowmax;
+			width:46%;
+		}
+	}
+
+	//---------------------------------------------
+	
+	&.shadow-curl-right{
+		&:before,&:after{
+			@include shadow($shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor);
+			right:$shadowwidth;
+		}
+	}
+
+	//---------------------------------------------
+	
+	&.shadow-curl-left{
+		&:before,&:after{
+			@include shadow(($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			left:$shadowwidth;
+		}
+	}
+	
+	//---------------------------------------------
+	
+	&.shadow-curl-bottom {
+		&:before,&:after{
+			@include shadow(0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor);
+			bottom:$shadowwidth;
+		}
+	}
+	
+	//---------------------------------------------
+	
+	&.shadow-curl-top{
+		&:before,&:after{
+			@include shadow(0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor);
+			top:$shadowwidth;
+		}
+	}
+	
+	//---------------------------------------------
+	
+	&.shadow-flip-left,
+	&.shadow-flip-right{
+		&:before,&:after{
+			width:46%;
+			max-width:$shadowmax;
+			height:$shadowwidth;
+		}
+		&:before{
+			top:$shadowwidth;
+			@include shadow(0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor);
+		}
+		&:after{
+			bottom:$shadowwidth;
+			@include shadow(0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor);
+		}
+	}
+	
+	//---------------------------------------------
+	
+	&.shadow-flip-top,
+	&.shadow-flip-bottom{
+		&:before,&:after{
+			height:46%;
+			max-height:$shadowmax;
+			width:$shadowwidth;
+		}
+		&:before{
+			left:$shadowwidth;
+			@include shadow(($shadowwidth* -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+		}
+		&:after{
+			right:$shadowwidth;
+			@include shadow($shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor);
+		}
+	}
+
+	//---------------------------------------------
+	
+	&.shadow-bottom{
+		&:after{
+			@include shadow(0 round($shadowwidth / 2) round($shadowwidth / 2) 0 $shadowcolor);
+			bottom:0;
+		}
+	}
+		
+	//---------------------------------------------
+
+	&.shadow-right{
+		&:after{
+			@include shadow(round($shadowwidth / 2) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			right:0;
+		}
+	}
+		
+	//---------------------------------------------
+	
+	&.shadow-left{
+		&:before{
+			@include shadow((round($shadowwidth / 2)* -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			left:0;
+		}
+	}
+	
+	//---------------------------------------------
+
+	&.shadow-top{
+		&:before{
+			@include shadow(0 (round($shadowwidth / 2) * -1) round($shadowwidth / 2) 0 $shadowcolor);
+			top:0;
+		}
+	}
+	
+	//---------------------------------------------
+	
+	&.shadow-top:before,
+	&.shadow-bottom:after{
+		@include borderradius(100%,$shadowwidth * 2);
+		height:100%;
+	}
+	
+	&.shadow-right:after,
+	&.shadow-left:before{
+		@include borderradius($shadowwidth * 2,100%);
+		width:100%;
+	}
+}
