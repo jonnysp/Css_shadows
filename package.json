@@ -1,0 +1,28 @@
+{
+  "name": "css_shadows",
+  "version": "1.0.0",
+  "description": "Css Shadows",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonnysp/Css_shadows.git"
+  },
+  "author": "Jonny Spitzner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonnysp/Css_shadows/issues"
+  },
+  "homepage": "https://github.com/jonnysp/Css_shadows#readme",
+
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0"
+
+
+  }
+}

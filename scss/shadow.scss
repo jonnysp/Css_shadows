@@ -5,30 +5,6 @@ $shadowrotation :4deg;
 $shadowwidth :10px;
 $shadowmax :150px;
 
-//mixins---------------------------------------------
-
-@mixin borderradius($first,$second){
-	-webkit-border-radius: #{$first} / #{$second};
-	-moz-border-radius: #{$first} / #{$second};
-	border-radius: #{$first} / #{$second};
-}
-
-@mixin shadow($shadows...) {
-	 -webkit-box-shadow:$shadows;
-		-moz-box-shadow:$shadows;
-	         box-shadow:$shadows;
-}
-
-@mixin rotate($deg:0deg){
-	-webkit-transform:rotate($deg); 
-	-moz-transform:rotate($deg); 
-    -o-transform:rotate($deg); 
-    -ms-transform:rotate($deg); 
-    transform:rotate($deg); 
-}
-
-//mixins end------------------------------------------
-
 .shadow{
 
 	&.shadow-background{
@@ -132,7 +108,7 @@ $shadowmax :150px;
 	&.shadow-flip-top:after,
 	&.shadow-flip-bottom:before,
 	&.shadow-flip-left:before{
-		@include rotate($shadowrotation);
+		transform:rotate($shadowrotation);
 	}
 	
 	&.shadow-corner-topright:before,
@@ -147,7 +123,7 @@ $shadowmax :150px;
 	&.shadow-flip-right:before,
 	&.shadow-flip-bottom:after,
 	&.shadow-flip-left:after{
-		@include rotate($shadowrotation * -1);
+		transform:rotate($shadowrotation * -1);
 	}
 
   //------------------------------------
@@ -174,7 +150,7 @@ $shadowmax :150px;
    &.shadow-corner-topleft{
 		&:before{
 			top:$shadowwidth;
-			@include shadow(0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor);	
+			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;	
 		}  
    }
    
@@ -184,7 +160,7 @@ $shadowmax :150px;
 	&.shadow-corner-bottomleft{
 		&:before{
 			bottom:$shadowwidth;
-			@include shadow(0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
 		}
 	}
 
@@ -194,7 +170,7 @@ $shadowmax :150px;
 	&.shadow-corner-bottomright{
 		&:after{
 			right:$shadowwidth;
-			@include shadow($shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
 		}
 	}
 
@@ -204,7 +180,7 @@ $shadowmax :150px;
 	 &.shadow-corner-bottomleft{
 		&:after{
 			left:$shadowwidth;
-			@include shadow(($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow:($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
 		}	 
 	  }
   
@@ -234,7 +210,7 @@ $shadowmax :150px;
 	
 	&.shadow-curl-right{
 		&:before,&:after{
-			@include shadow($shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
 			right:$shadowwidth;
 		}
 	}
@@ -243,7 +219,7 @@ $shadowmax :150px;
 	
 	&.shadow-curl-left{
 		&:before,&:after{
-			@include shadow(($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: ($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
 			left:$shadowwidth;
 		}
 	}
@@ -252,7 +228,7 @@ $shadowmax :150px;
 	
 	&.shadow-curl-bottom {
 		&:before,&:after{
-			@include shadow(0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
 			bottom:$shadowwidth;
 		}
 	}
@@ -261,7 +237,7 @@ $shadowmax :150px;
 	
 	&.shadow-curl-top{
 		&:before,&:after{
-			@include shadow(0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;
 			top:$shadowwidth;
 		}
 	}
@@ -277,11 +253,11 @@ $shadowmax :150px;
 		}
 		&:before{
 			top:$shadowwidth;
-			@include shadow(0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;
 		}
 		&:after{
 			bottom:$shadowwidth;
-			@include shadow(0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
 		}
 	}
 	
@@ -296,11 +272,11 @@ $shadowmax :150px;
 		}
 		&:before{
 			left:$shadowwidth;
-			@include shadow(($shadowwidth* -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: ($shadowwidth* -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
 		}
 		&:after{
 			right:$shadowwidth;
-			@include shadow($shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
 		}
 	}
 
@@ -308,7 +284,7 @@ $shadowmax :150px;
 	
 	&.shadow-bottom{
 		&:after{
-			@include shadow(0 round($shadowwidth / 2) round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 round($shadowwidth / 2) round($shadowwidth / 2) 0 $shadowcolor;
 			bottom:0;
 		}
 	}
@@ -317,7 +293,7 @@ $shadowmax :150px;
 
 	&.shadow-right{
 		&:after{
-			@include shadow(round($shadowwidth / 2) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: round($shadowwidth / 2) 0 round($shadowwidth / 2) 0 $shadowcolor;
 			right:0;
 		}
 	}
@@ -326,7 +302,7 @@ $shadowmax :150px;
 	
 	&.shadow-left{
 		&:before{
-			@include shadow((round($shadowwidth / 2)* -1) 0 round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow:(round($shadowwidth / 2)* -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
 			left:0;
 		}
 	}
@@ -335,7 +311,7 @@ $shadowmax :150px;
 
 	&.shadow-top{
 		&:before{
-			@include shadow(0 (round($shadowwidth / 2) * -1) round($shadowwidth / 2) 0 $shadowcolor);
+			box-shadow: 0 (round($shadowwidth / 2) * -1) round($shadowwidth / 2) 0 $shadowcolor;
 			top:0;
 		}
 	}
@@ -344,13 +320,13 @@ $shadowmax :150px;
 	
 	&.shadow-top:before,
 	&.shadow-bottom:after{
-		@include borderradius(100%,$shadowwidth * 2);
+		border-radius: #{100%} / #{$shadowwidth * 2};
 		height:100%;
 	}
 	
 	&.shadow-right:after,
 	&.shadow-left:before{
-		@include borderradius($shadowwidth * 2,100%);
+		border-radius: #{$shadowwidth * 2} / #{100%} ;
 		width:100%;
 	}
 }

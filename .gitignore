@@ -1,0 +1,5 @@
+# grunt-contrib-sass cache
+.sass-cache
+
+# Folders to ignore
+node_modules
