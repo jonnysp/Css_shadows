@@ -12,6 +12,9 @@ module.exports = function(grunt) {
       }
     },
     autoprefixer:{
+      options: {
+                browsers: ['last 10 versions']
+        },
       dist:{
         files:{
           'css/shadow.min.css':'css/shadow.min.css'
