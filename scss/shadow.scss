@@ -5,9 +5,9 @@ $shadowrotation :4deg;
 $shadowwidth :10px;
 $shadowmax :150px;
 
-.shadow{
+.shadow-fx{
 
-	&.shadow-background{
+	&.fx-background{
 		background-color:$background;
 	}
 
@@ -16,18 +16,18 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 
-	&.shadow-corner-topright,
-	&.shadow-corner-topleft,
-	&.shadow-corner-bottomright,
-	&.shadow-corner-bottomleft,
-	&.shadow-curl-right,
-	&.shadow-curl-left,
-	&.shadow-curl-bottom,
-	&.shadow-curl-top,
-	&.shadow-flip-left,
-	&.shadow-flip-right,
-	&.shadow-flip-top,
-	&.shadow-flip-bottom{
+	&.fx-corner-topright,
+	&.fx-corner-topleft,
+	&.fx-corner-bottomright,
+	&.fx-corner-bottomleft,
+	&.fx-curl-right,
+	&.fx-curl-left,
+	&.fx-curl-bottom,
+	&.fx-curl-top,
+	&.fx-flip-left,
+	&.fx-flip-right,
+	&.fx-flip-top,
+	&.fx-flip-bottom{
 		&:before,&:after{
 			content:"";
 			position:absolute;
@@ -35,10 +35,10 @@ $shadowmax :150px;
 		}
 	}
 	
-	&.shadow-bottom:after,
-	&.shadow-right:after,
-	&.shadow-left:before,
-	&.shadow-top:before{
+	&.fx-bottom:after,
+	&.fx-right:after,
+	&.fx-left:before,
+	&.fx-top:before{
 			content:"";
 			position:absolute;
 			z-index:-1;
@@ -46,92 +46,92 @@ $shadowmax :150px;
 
    //---------------------------------------------
  
-   &.shadow-left:before,
-   &.shadow-right:after,
-   &.shadow-flip-top:before,
-   &.shadow-flip-top:after,
-   &.shadow-curl-right:before,
-   &.shadow-curl-left:before,
-   &.shadow-corner-topright:after,
-   &.shadow-corner-topleft:after{
+   &.fx-left:before,
+   &.fx-right:after,
+   &.fx-flip-top:before,
+   &.fx-flip-top:after,
+   &.fx-curl-right:before,
+   &.fx-curl-left:before,
+   &.fx-corner-topright:after,
+   &.fx-corner-topleft:after{
 	   top:$shadowpadding;
    }
 
    //---------------------------------------------
  
-   &.shadow-left:before,
-   &.shadow-right:after,
-   &.shadow-flip-bottom:before,
-   &.shadow-flip-bottom:after,
-   &.shadow-curl-right:after,
-   &.shadow-curl-left:after,
-   &.shadow-corner-bottomright:after,
-   &.shadow-corner-bottomleft:after{
+   &.fx-left:before,
+   &.fx-right:after,
+   &.fx-flip-bottom:before,
+   &.fx-flip-bottom:after,
+   &.fx-curl-right:after,
+   &.fx-curl-left:after,
+   &.fx-corner-bottomright:after,
+   &.fx-corner-bottomleft:after{
 	   bottom:$shadowpadding;
   }
   
   //---------------------------------------------
-  &.shadow-top:before,
-  &.shadow-bottom:after,
-  &.shadow-flip-right:before, 
-  &.shadow-flip-right:after,
-  &.shadow-curl-bottom:after,
-  &.shadow-curl-top:after,
-  &.shadow-corner-topright:before,
-  &.shadow-corner-bottomright:before{
+  &.fx-top:before,
+  &.fx-bottom:after,
+  &.fx-flip-right:before, 
+  &.fx-flip-right:after,
+  &.fx-curl-bottom:after,
+  &.fx-curl-top:after,
+  &.fx-corner-topright:before,
+  &.fx-corner-bottomright:before{
 	  right:$shadowpadding;
   }
 
    //---------------------------------------------
-   &.shadow-top:before,
-   &.shadow-bottom:after,
-   &.shadow-flip-left:before,
-   &.shadow-flip-left:after,
-   &.shadow-curl-bottom:before,
-   &.shadow-curl-top:before,
-   &.shadow-corner-topleft:before,
-   &.shadow-corner-bottomleft:before{
+   &.fx-top:before,
+   &.fx-bottom:after,
+   &.fx-flip-left:before,
+   &.fx-flip-left:after,
+   &.fx-curl-bottom:before,
+   &.fx-curl-top:before,
+   &.fx-corner-topleft:before,
+   &.fx-corner-bottomleft:before{
 		left:$shadowpadding;	
 	}
 	
   //------------------------------------
   
-	&.shadow-corner-topright:after,
-	&.shadow-corner-bottomright:before,
-	&.shadow-corner-topleft:before,
-	&.shadow-corner-bottomleft:after,
-	&.shadow-curl-right:before,
-	&.shadow-curl-left:after,
-	&.shadow-curl-bottom:after,
-	&.shadow-curl-top:before,
-	&.shadow-flip-right:after,
-	&.shadow-flip-top:after,
-	&.shadow-flip-bottom:before,
-	&.shadow-flip-left:before{
+	&.fx-corner-topright:after,
+	&.fx-corner-bottomright:before,
+	&.fx-corner-topleft:before,
+	&.fx-corner-bottomleft:after,
+	&.fx-curl-right:before,
+	&.fx-curl-left:after,
+	&.fx-curl-bottom:after,
+	&.fx-curl-top:before,
+	&.fx-flip-right:after,
+	&.fx-flip-top:after,
+	&.fx-flip-bottom:before,
+	&.fx-flip-left:before{
 		transform:rotate($shadowrotation);
 	}
 	
-	&.shadow-corner-topright:before,
-	&.shadow-corner-bottomright:after,
-	&.shadow-corner-topleft:after,
-	&.shadow-corner-bottomleft:before,
-	&.shadow-curl-right:after,
-	&.shadow-curl-left:before,
-	&.shadow-curl-bottom:before,
-	&.shadow-curl-top:after,
-	&.shadow-flip-top:before,
-	&.shadow-flip-right:before,
-	&.shadow-flip-bottom:after,
-	&.shadow-flip-left:after{
+	&.fx-corner-topright:before,
+	&.fx-corner-bottomright:after,
+	&.fx-corner-topleft:after,
+	&.fx-corner-bottomleft:before,
+	&.fx-curl-right:after,
+	&.fx-curl-left:before,
+	&.fx-curl-bottom:before,
+	&.fx-curl-top:after,
+	&.fx-flip-top:before,
+	&.fx-flip-right:before,
+	&.fx-flip-bottom:after,
+	&.fx-flip-left:after{
 		transform:rotate($shadowrotation * -1);
 	}
 
   //------------------------------------
  
-    &.shadow-corner-topright,
-    &.shadow-corner-topleft,
-    &.shadow-corner-bottomright,
-	&.shadow-corner-bottomleft{
+    &.fx-corner-topright,
+    &.fx-corner-topleft,
+    &.fx-corner-bottomright,
+	&.fx-corner-bottomleft{
 		&:before{
 			width:46%;
 			height:$shadowwidth;
@@ -146,8 +146,8 @@ $shadowmax :150px;
 	
    //---------------------------------------------
 	
-   &.shadow-corner-topright,
-   &.shadow-corner-topleft{
+   &.fx-corner-topright,
+   &.fx-corner-topleft{
 		&:before{
 			top:$shadowwidth;
 			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;	
@@ -156,8 +156,8 @@ $shadowmax :150px;
    
  	//---------------------------------------------
 	  
-    &.shadow-corner-bottomright,
-	&.shadow-corner-bottomleft{
+    &.fx-corner-bottomright,
+	&.fx-corner-bottomleft{
 		&:before{
 			bottom:$shadowwidth;
 			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
@@ -166,8 +166,8 @@ $shadowmax :150px;
 
 	//---------------------------------------------
 
-    &.shadow-corner-topright,
-	&.shadow-corner-bottomright{
+    &.fx-corner-topright,
+	&.fx-corner-bottomright{
 		&:after{
 			right:$shadowwidth;
 			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
@@ -176,8 +176,8 @@ $shadowmax :150px;
 
  	//---------------------------------------------
 	
-	 &.shadow-corner-topleft,
-	 &.shadow-corner-bottomleft{
+	 &.fx-corner-topleft,
+	 &.fx-corner-bottomleft{
 		&:after{
 			left:$shadowwidth;
 			box-shadow:($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
@@ -186,8 +186,8 @@ $shadowmax :150px;
   
 	//---------------------------------------------
 	
-	&.shadow-curl-right,
-	&.shadow-curl-left{
+	&.fx-curl-right,
+	&.fx-curl-left{
 		&:before,&:after{
 			height:46%;
 			max-height:$shadowmax;
@@ -197,8 +197,8 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 	
-	&.shadow-curl-bottom,
-	&.shadow-curl-top {
+	&.fx-curl-bottom,
+	&.fx-curl-top {
 		&:before,&:after{
 			height:$shadowwidth;
 			max-width:$shadowmax;
@@ -208,7 +208,7 @@ $shadowmax :150px;
 
 	//---------------------------------------------
 	
-	&.shadow-curl-right{
+	&.fx-curl-right{
 		&:before,&:after{
 			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
 			right:$shadowwidth;
@@ -217,7 +217,7 @@ $shadowmax :150px;
 
 	//---------------------------------------------
 	
-	&.shadow-curl-left{
+	&.fx-curl-left{
 		&:before,&:after{
 			box-shadow: ($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
 			left:$shadowwidth;
@@ -226,7 +226,7 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 	
-	&.shadow-curl-bottom {
+	&.fx-curl-bottom {
 		&:before,&:after{
 			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
 			bottom:$shadowwidth;
@@ -235,7 +235,7 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 	
-	&.shadow-curl-top{
+	&.fx-curl-top{
 		&:before,&:after{
 			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;
 			top:$shadowwidth;
@@ -244,8 +244,8 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 	
-	&.shadow-flip-left,
-	&.shadow-flip-right{
+	&.fx-flip-left,
+	&.fx-flip-right{
 		&:before,&:after{
 			width:46%;
 			max-width:$shadowmax;
@@ -263,8 +263,8 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 	
-	&.shadow-flip-top,
-	&.shadow-flip-bottom{
+	&.fx-flip-top,
+	&.fx-flip-bottom{
 		&:before,&:after{
 			height:46%;
 			max-height:$shadowmax;
@@ -282,7 +282,7 @@ $shadowmax :150px;
 
 	//---------------------------------------------
 	
-	&.shadow-bottom{
+	&.fx-bottom{
 		&:after{
 			box-shadow: 0 round($shadowwidth / 2) round($shadowwidth / 2) 0 $shadowcolor;
 			bottom:0;
@@ -291,7 +291,7 @@ $shadowmax :150px;
 		
 	//---------------------------------------------
 
-	&.shadow-right{
+	&.fx-right{
 		&:after{
 			box-shadow: round($shadowwidth / 2) 0 round($shadowwidth / 2) 0 $shadowcolor;
 			right:0;
@@ -300,7 +300,7 @@ $shadowmax :150px;
 		
 	//---------------------------------------------
 	
-	&.shadow-left{
+	&.fx-left{
 		&:before{
 			box-shadow:(round($shadowwidth / 2)* -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
 			left:0;
@@ -309,7 +309,7 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 
-	&.shadow-top{
+	&.fx-top{
 		&:before{
 			box-shadow: 0 (round($shadowwidth / 2) * -1) round($shadowwidth / 2) 0 $shadowcolor;
 			top:0;
@@ -318,14 +318,14 @@ $shadowmax :150px;
 	
 	//---------------------------------------------
 	
-	&.shadow-top:before,
-	&.shadow-bottom:after{
+	&.fx-top:before,
+	&.fx-bottom:after{
 		border-radius: #{100%} / #{$shadowwidth * 2};
 		height:100%;
 	}
 	
-	&.shadow-right:after,
-	&.shadow-left:before{
+	&.fx-right:after,
+	&.fx-left:before{
 		border-radius: #{$shadowwidth * 2} / #{100%} ;
 		width:100%;
 	}
