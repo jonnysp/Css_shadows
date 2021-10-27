@@ -16,13 +16,14 @@
     "url": "https://github.com/jonnysp/Css_shadows/issues"
   },
   "homepage": "https://github.com/jonnysp/Css_shadows#readme",
-
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-sass": "^1.0.0"
-
-
+    "grunt-autoprefixer": "^0.4.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^6.0.1"
   }
 }
