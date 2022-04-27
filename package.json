@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/jonnysp/Css_shadows#readme",
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.5.2",
     "grunt-autoprefixer": "^0.4.2",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0"
