@@ -1,14 +1,14 @@
-$background :#fff;
-$shadowcolor :rgba(0, 0, 0, 0.3);
-$shadowpadding :4%;
-$shadowrotation :4deg;
-$shadowwidth :10px;
-$shadowmax :150px;
-
 .shadow-fx{
 
+	--background: #fff;
+	--shadowcolor: rgba(0, 0, 0, 0.3);
+	--shadowwidth: 10px;
+	--shadowmax: 150px;
+	--shadowrotation: 4deg;
+	--shadowpadding: 4%;
+
 	&.fx-background{
-		background-color:$background;
+		background-color: var(--background);
 	}
 
 	position:relative;
@@ -54,7 +54,7 @@ $shadowmax :150px;
    &.fx-curl-left:before,
    &.fx-corner-topright:after,
    &.fx-corner-topleft:after{
-	   top:$shadowpadding;
+	   top:var(--shadowpadding);
    }
 
    //---------------------------------------------
@@ -67,35 +67,35 @@ $shadowmax :150px;
    &.fx-curl-left:after,
    &.fx-corner-bottomright:after,
    &.fx-corner-bottomleft:after{
-	   bottom:$shadowpadding;
+	   bottom:var(--shadowpadding);
   }
   
-  //---------------------------------------------
-  &.fx-top:before,
-  &.fx-bottom:after,
-  &.fx-flip-right:before, 
-  &.fx-flip-right:after,
-  &.fx-curl-bottom:after,
-  &.fx-curl-top:after,
-  &.fx-corner-topright:before,
-  &.fx-corner-bottomright:before{
-	  right:$shadowpadding;
-  }
+	//---------------------------------------------
+	&.fx-top:before,
+	&.fx-bottom:after,
+	&.fx-flip-right:before, 
+	&.fx-flip-right:after,
+	&.fx-curl-bottom:after,
+	&.fx-curl-top:after,
+	&.fx-corner-topright:before,
+	&.fx-corner-bottomright:before{
+		right:var(--shadowpadding);
+	}
 
    //---------------------------------------------
-   &.fx-top:before,
-   &.fx-bottom:after,
-   &.fx-flip-left:before,
-   &.fx-flip-left:after,
-   &.fx-curl-bottom:before,
-   &.fx-curl-top:before,
-   &.fx-corner-topleft:before,
-   &.fx-corner-bottomleft:before{
-		left:$shadowpadding;	
+	&.fx-top:before,
+	&.fx-bottom:after,
+	&.fx-flip-left:before,
+	&.fx-flip-left:after,
+	&.fx-curl-bottom:before,
+	&.fx-curl-top:before,
+	&.fx-corner-topleft:before,
+	&.fx-corner-bottomleft:before{
+		left:var(--shadowpadding);
 	}
 	
-  //------------------------------------
-  
+	//------------------------------------
+
 	&.fx-corner-topright:after,
 	&.fx-corner-bottomright:before,
 	&.fx-corner-topleft:before,
@@ -108,7 +108,7 @@ $shadowmax :150px;
 	&.fx-flip-top:after,
 	&.fx-flip-bottom:before,
 	&.fx-flip-left:before{
-		transform:rotate($shadowrotation);
+		transform:rotate(var(--shadowrotation));
 	}
 	
 	&.fx-corner-topright:before,
@@ -123,44 +123,44 @@ $shadowmax :150px;
 	&.fx-flip-right:before,
 	&.fx-flip-bottom:after,
 	&.fx-flip-left:after{
-		transform:rotate($shadowrotation * -1);
+		transform:rotate( calc(var(--shadowrotation) * -1));
 	}
 
-  //------------------------------------
- 
-    &.fx-corner-topright,
-    &.fx-corner-topleft,
-    &.fx-corner-bottomright,
+	//------------------------------------
+
+	&.fx-corner-topright,
+	&.fx-corner-topleft,
+	&.fx-corner-bottomright,
 	&.fx-corner-bottomleft{
 		&:before{
 			width:46%;
-			height:$shadowwidth;
-			max-width:$shadowmax;	
+			height:	var(--shadowwidth);
+			max-width: var(--shadowmax);	
 		}  
 		&:after{
-			width:$shadowwidth;
+			width:	var(--shadowwidth);
 			height:46%;
-			max-height:$shadowmax;
+			max-height: var(--shadowmax);
 		}		
 	}
 	
-   //---------------------------------------------
+	//---------------------------------------------
 	
-   &.fx-corner-topright,
-   &.fx-corner-topleft{
+	&.fx-corner-topright,
+	&.fx-corner-topleft{
 		&:before{
-			top:$shadowwidth;
-			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth * 0.5) 0 $shadowcolor;	
+			top: var(--shadowwidth);
+			box-shadow: 0 calc(var(--shadowwidth) * -1) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);	
 		}  
-   }
+	}
    
  	//---------------------------------------------
 	  
     &.fx-corner-bottomright,
 	&.fx-corner-bottomleft{
 		&:before{
-			bottom:$shadowwidth;
-			box-shadow: 0 $shadowwidth round($shadowwidth * 0.5) 0 $shadowcolor;
+			bottom:	var(--shadowwidth);
+			box-shadow: 0 var(--shadowwidth) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}
 	}
 
@@ -169,8 +169,8 @@ $shadowmax :150px;
     &.fx-corner-topright,
 	&.fx-corner-bottomright{
 		&:after{
-			right:$shadowwidth;
-			box-shadow: $shadowwidth 0 round($shadowwidth * 0.5) 0 $shadowcolor;
+			right: var(--shadowwidth);
+			box-shadow: var(--shadowwidth) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}
 	}
 
@@ -179,8 +179,8 @@ $shadowmax :150px;
 	 &.fx-corner-topleft,
 	 &.fx-corner-bottomleft{
 		&:after{
-			left:$shadowwidth;
-			box-shadow:($shadowwidth * -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
+			left: var(--shadowwidth);
+			box-shadow: calc(var(--shadowwidth) * -1) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}	 
 	  }
   
@@ -190,8 +190,8 @@ $shadowmax :150px;
 	&.fx-curl-left{
 		&:before,&:after{
 			height:46%;
-			max-height:$shadowmax;
-			width:$shadowwidth;
+			max-height: var(--shadowmax);
+			width: var(--shadowwidth);
 		}
 	}
 	
@@ -200,8 +200,8 @@ $shadowmax :150px;
 	&.fx-curl-bottom,
 	&.fx-curl-top {
 		&:before,&:after{
-			height:$shadowwidth;
-			max-width:$shadowmax;
+			height: var(--shadowwidth);
+			max-width:var(--shadowmax);
 			width:46%;
 		}
 	}
@@ -210,8 +210,8 @@ $shadowmax :150px;
 	
 	&.fx-curl-right{
 		&:before,&:after{
-			box-shadow: $shadowwidth 0 round($shadowwidth * 0.5) 0 $shadowcolor;
-			right:$shadowwidth;
+			box-shadow: var(--shadowwidth) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
+			right: var(--shadowwidth);
 		}
 	}
 
@@ -219,8 +219,8 @@ $shadowmax :150px;
 	
 	&.fx-curl-left{
 		&:before,&:after{
-			box-shadow: ($shadowwidth * -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
-			left:$shadowwidth;
+			box-shadow: calc(var(--shadowwidth) * -1) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
+			left: var(--shadowwidth);
 		}
 	}
 	
@@ -228,8 +228,8 @@ $shadowmax :150px;
 	
 	&.fx-curl-bottom {
 		&:before,&:after{
-			box-shadow: 0 $shadowwidth round($shadowwidth * 0.5) 0 $shadowcolor;
-			bottom:$shadowwidth;
+			box-shadow: 0 var(--shadowwidth) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
+			bottom: var(--shadowwidth);
 		}
 	}
 	
@@ -237,8 +237,8 @@ $shadowmax :150px;
 	
 	&.fx-curl-top{
 		&:before,&:after{
-			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth * 0.5) 0 $shadowcolor;
-			top:$shadowwidth;
+			box-shadow: 0 calc(var(--shadowwidth) * -1) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
+			top: var(--shadowwidth);
 		}
 	}
 	
@@ -248,16 +248,16 @@ $shadowmax :150px;
 	&.fx-flip-right{
 		&:before,&:after{
 			width:46%;
-			max-width:$shadowmax;
-			height:$shadowwidth;
+			max-width:var(--shadowmax);
+			height: var(--shadowwidth);
 		}
 		&:before{
-			top:$shadowwidth;
-			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth * 0.5) 0 $shadowcolor;
+			top: var(--shadowwidth);
+			box-shadow: 0 calc(var(--shadowwidth) * -1) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}
 		&:after{
-			bottom:$shadowwidth;
-			box-shadow: 0 $shadowwidth round($shadowwidth * 0.5) 0 $shadowcolor;
+			bottom: var(--shadowwidth);
+			box-shadow: 0 var(--shadowwidth) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}
 	}
 	
@@ -267,16 +267,16 @@ $shadowmax :150px;
 	&.fx-flip-bottom{
 		&:before,&:after{
 			height:46%;
-			max-height:$shadowmax;
-			width:$shadowwidth;
+			max-height:var(--shadowmax);
+			width: var(--shadowwidth);
 		}
 		&:before{
-			left:$shadowwidth;
-			box-shadow: ($shadowwidth* -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
+			left: var(--shadowwidth);
+			box-shadow: calc(var(--shadowwidth) * -1) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}
 		&:after{
-			right:$shadowwidth;
-			box-shadow: $shadowwidth 0 round($shadowwidth * 0.5) 0 $shadowcolor;
+			right: var(--shadowwidth);
+			box-shadow: var(--shadowwidth) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 		}
 	}
 
@@ -284,7 +284,7 @@ $shadowmax :150px;
 	
 	&.fx-bottom{
 		&:after{
-			box-shadow: 0 round($shadowwidth * 0.5) round($shadowwidth * 0.5) 0 $shadowcolor;
+			box-shadow: 0 calc(var(--shadowwidth) / 2) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 			bottom:0;
 		}
 	}
@@ -293,7 +293,7 @@ $shadowmax :150px;
 
 	&.fx-right{
 		&:after{
-			box-shadow: round($shadowwidth * 0.5) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
+			box-shadow: calc(var(--shadowwidth) / 2) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 			right:0;
 		}
 	}
@@ -302,7 +302,7 @@ $shadowmax :150px;
 	
 	&.fx-left{
 		&:before{
-			box-shadow:(round($shadowwidth * 0.5)* -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
+			box-shadow: calc(var(--shadowwidth) / 2 * -1) 0 calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 			left:0;
 		}
 	}
@@ -311,7 +311,7 @@ $shadowmax :150px;
 
 	&.fx-top{
 		&:before{
-			box-shadow: 0 (round($shadowwidth * 0.5) * -1) round($shadowwidth * 0.5) 0 $shadowcolor;
+			box-shadow: 0 calc(var(--shadowwidth) / 2 * -1) calc(var(--shadowwidth) / 2) 0 var(--shadowcolor);
 			top:0;
 		}
 	}
@@ -320,13 +320,21 @@ $shadowmax :150px;
 	
 	&.fx-top:before,
 	&.fx-bottom:after{
-		border-radius: #{100%} / #{$shadowwidth * 2};
+//		border-radius: #{100%} / #{$shadowwidth * 2};
+		border-top-left-radius: 100% calc(var(--shadowwidth) * 2);
+		border-top-right-radius: 100% calc(var(--shadowwidth) * 2);
+		border-bottom-right-radius: 100% calc(var(--shadowwidth) * 2);
+		border-bottom-left-radius: 100% calc(var(--shadowwidth) * 2);
 		height:100%;
 	}
 	
 	&.fx-right:after,
 	&.fx-left:before{
-		border-radius: #{$shadowwidth * 2} / #{100%} ;
+//		border-radius: #{$shadowwidth * 2} / #{100%} ;
+		border-top-left-radius: calc(var(--shadowwidth) * 2) 100%;
+		border-top-right-radius: calc(var(--shadowwidth) * 2) 100%;
+		border-bottom-right-radius: calc(var(--shadowwidth) * 2) 100%;
+		border-bottom-left-radius: calc(var(--shadowwidth) * 2) 100%;
 		width:100%;
 	}
 }
