@@ -4,7 +4,12 @@
   "description": "Css Shadows",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
+    "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
+    "css-prefix-main": "postcss --config build/postcss.config.js --replace \"css/*.css\" \"!css/*.rtl*.css\" \"!css/*.min.css\"",
+    "css-minify": "npm-run-all --aggregate-output --parallel css-minify-*",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\""
   },
   "repository": {
     "type": "git",
@@ -17,13 +22,12 @@
   },
   "homepage": "https://github.com/jonnysp/Css_shadows#readme",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-autoprefixer": "^0.4.2",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "autoprefixer": "^10.4.13",
+    "clean-css-cli": "^5.6.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.56.1"
   },
-  "dependencies": {
-    "grunt-sass": "^3.1.0",
-    "node-sass": "^6.0.1"
-  }
+  "dependencies": {}
 }

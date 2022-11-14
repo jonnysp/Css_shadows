@@ -150,7 +150,7 @@ $shadowmax :150px;
    &.fx-corner-topleft{
 		&:before{
 			top:$shadowwidth;
-			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;	
+			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth * 0.5) 0 $shadowcolor;	
 		}  
    }
    
@@ -160,7 +160,7 @@ $shadowmax :150px;
 	&.fx-corner-bottomleft{
 		&:before{
 			bottom:$shadowwidth;
-			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 $shadowwidth round($shadowwidth * 0.5) 0 $shadowcolor;
 		}
 	}
 
@@ -170,7 +170,7 @@ $shadowmax :150px;
 	&.fx-corner-bottomright{
 		&:after{
 			right:$shadowwidth;
-			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: $shadowwidth 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 		}
 	}
 
@@ -180,7 +180,7 @@ $shadowmax :150px;
 	 &.fx-corner-bottomleft{
 		&:after{
 			left:$shadowwidth;
-			box-shadow:($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow:($shadowwidth * -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 		}	 
 	  }
   
@@ -210,7 +210,7 @@ $shadowmax :150px;
 	
 	&.fx-curl-right{
 		&:before,&:after{
-			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: $shadowwidth 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 			right:$shadowwidth;
 		}
 	}
@@ -219,7 +219,7 @@ $shadowmax :150px;
 	
 	&.fx-curl-left{
 		&:before,&:after{
-			box-shadow: ($shadowwidth * -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: ($shadowwidth * -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 			left:$shadowwidth;
 		}
 	}
@@ -228,7 +228,7 @@ $shadowmax :150px;
 	
 	&.fx-curl-bottom {
 		&:before,&:after{
-			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 $shadowwidth round($shadowwidth * 0.5) 0 $shadowcolor;
 			bottom:$shadowwidth;
 		}
 	}
@@ -237,7 +237,7 @@ $shadowmax :150px;
 	
 	&.fx-curl-top{
 		&:before,&:after{
-			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth * 0.5) 0 $shadowcolor;
 			top:$shadowwidth;
 		}
 	}
@@ -253,11 +253,11 @@ $shadowmax :150px;
 		}
 		&:before{
 			top:$shadowwidth;
-			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 ($shadowwidth * -1) round($shadowwidth * 0.5) 0 $shadowcolor;
 		}
 		&:after{
 			bottom:$shadowwidth;
-			box-shadow: 0 $shadowwidth round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 $shadowwidth round($shadowwidth * 0.5) 0 $shadowcolor;
 		}
 	}
 	
@@ -272,11 +272,11 @@ $shadowmax :150px;
 		}
 		&:before{
 			left:$shadowwidth;
-			box-shadow: ($shadowwidth* -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: ($shadowwidth* -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 		}
 		&:after{
 			right:$shadowwidth;
-			box-shadow: $shadowwidth 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: $shadowwidth 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 		}
 	}
 
@@ -284,7 +284,7 @@ $shadowmax :150px;
 	
 	&.fx-bottom{
 		&:after{
-			box-shadow: 0 round($shadowwidth / 2) round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 round($shadowwidth * 0.5) round($shadowwidth * 0.5) 0 $shadowcolor;
 			bottom:0;
 		}
 	}
@@ -293,7 +293,7 @@ $shadowmax :150px;
 
 	&.fx-right{
 		&:after{
-			box-shadow: round($shadowwidth / 2) 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: round($shadowwidth * 0.5) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 			right:0;
 		}
 	}
@@ -302,7 +302,7 @@ $shadowmax :150px;
 	
 	&.fx-left{
 		&:before{
-			box-shadow:(round($shadowwidth / 2)* -1) 0 round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow:(round($shadowwidth * 0.5)* -1) 0 round($shadowwidth * 0.5) 0 $shadowcolor;
 			left:0;
 		}
 	}
@@ -311,7 +311,7 @@ $shadowmax :150px;
 
 	&.fx-top{
 		&:before{
-			box-shadow: 0 (round($shadowwidth / 2) * -1) round($shadowwidth / 2) 0 $shadowcolor;
+			box-shadow: 0 (round($shadowwidth * 0.5) * -1) round($shadowwidth * 0.5) 0 $shadowcolor;
 			top:0;
 		}
 	}
